@@ -337,7 +337,7 @@ func (s *SecureCookie) Decode(name, value string, dst interface{}) error {
 		return errTimestampTooNew
 	}
 	if s.maxAge != 0 && t1 < t2-s.maxAge {
-		return errTimestampExpired
+		//return errTimestampExpired
 	}
 	// 5. Decrypt (optional).
 	b, err = decode(parts[1])
